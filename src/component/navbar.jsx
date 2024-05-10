@@ -1,17 +1,37 @@
 import React from 'react'
 import Vite from '/public/vite.svg'
-import { Link } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
+import AppTitle from './app_title';
 
-export default function navbar() {
+export default function Navbar() {
+    var navigate = useNavigate();
+
+    var navItems = [
+        { id: 1, name: 'Home', path: 'home' },
+        { id: 2, name: 'Contact us', path: 'contact' },
+        { id: 3, name: 'About us', path: 'about' },
+    ];
+
     return (
-        <div className='px-[15px] flex justify-between h-14 bg-[#ebb]'>
-            <img src={Vite} alt='logo' height='50px' width='50px'  className='p-2'/>
+        <div className='px-[15px] flex justify-between h-14'>
+            <AppTitle className='text-4xl' />
             <ul className='block content-center list-none *:px-4'>
-                <li className="inline text-lg font-semibold text-white"><Link to='home'>Home</Link></li>
-                <li className='inline  text-lg font-semibold text-white'><Link to='contact'>Conact us</Link></li>
-                <li className='inline  text-lg font-semibold text-white'><Link to='about'>About</Link></li>
+                {navItems.map((e) =>
+                (
+                    <li key={e.id} className="inline">
+                        <NavLink className={({ isActive }) => !isActive ? "nav-link" : "nav-link text-blue-500"} to={`/${e.path}`}>{e.name}</NavLink>
+                    </li>
+                )
+                )}
             </ul>
-            <button className='button-header text-white border-white '><Link to='signin'> Register</Link></button>
+            <div className='flex content-center items-center'>
+                <button className='button-fill px-4 text-sm mr-4' onClick={() => {
+                    navigate('/signup');
+                }}>Register</button>
+                <button className='button-outline px-4 text-sm mr-4' onClick={() => {
+                    navigate('/signup');
+                }}>Register</button>
+            </div>
         </div>
     )
 }

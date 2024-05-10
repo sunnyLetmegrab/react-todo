@@ -2,7 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+
+:root {
+    --theme-color: #1F3E97;
+    --grey-text: #858585;
+    --grey-bg: #F1F1F1;
+    --error-red: #EA1C0F;
+    --theme-opacity-color: #1f3d975b;
+
+}
+
 @layer components {
+
+    .nav-link {
+        @apply inline text-lg font-semibold
+    }
+
     .button-header {
         @apply self-center h-fit px-4 py-1 border-[1.5px] rounded-[8px] font-semibold
     }
@@ -10,19 +25,23 @@
     .button-header:hover {
         @apply hover:bg-slate-200 text-white
     }
-    .input-field{
+
+    .input-field {
         @apply block h-10 pl-2 w-full outline-none common-border
     }
-    .button-fill{
-       @apply w-full h-10 bg-[#ebbbbb] rounded-[10px] text-[#fff] font-semibold mt-10
+
+    .button-fill {
+        @apply w-full h-7 bg-[var(--theme-color)] rounded-[10px] text-white font-semibold
     }
-    .button-outline{
-        @apply w-full h-10 text-[#ebb] bg-white rounded-[10px] border border-[#ebb] font-semibold
+
+    .button-outline {
+        @apply w-full h-7 text-[var(--theme-color)] bg-white rounded-[10px] border border-[var(--theme-color)] font-semibold
     }
-    .button-fill:hover{
-        @apply text-[#ebb] bg-white border border-[#ebb] 
+
+    .button-fill:hover {
+        @apply bg-[var(--theme-opacity-color)]
     }
-    
+
 }
 
 @layer utilities {

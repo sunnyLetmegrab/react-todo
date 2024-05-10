@@ -10,19 +10,22 @@ import LoginPage from './routes/loginpage.jsx'
 
 
 
-var routes = createBrowserRouter(
+var appRoute = createBrowserRouter(
   [
     {
       path: '/', element: <Root />, children: [
         { path: 'home', element: <>home</>, },
         { path: 'about', element: <>about</>, },
         { path: 'contact', element: <>contact</>, },
-        { path: 'signin', element: <SigninPage /> },
-        { path: 'login', element: <LoginPage /> }
 
       ],
       errorElement: <ErrorPage />
     },
+    { path: 'signup', element: <SigninPage /> },
+    { path: 'login', element: <LoginPage />, }
+
+
+
 
   ]
 )
@@ -30,6 +33,6 @@ var routes = createBrowserRouter(
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={routes} />
+    <RouterProvider router={appRoute} />
   </React.StrictMode>,
 )
