@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Root from './routes/root.jsx'
 import ErrorPage from './routes/error-page.jsx'
 import SigninPage from './routes/signinpage.jsx'
+import LoginPage from './routes/loginpage.jsx'
 
 
 
@@ -16,7 +17,8 @@ var routes = createBrowserRouter(
         { path: 'home', element: <>home</>, },
         { path: 'about', element: <>about</>, },
         { path: 'contact', element: <>contact</>, },
-        { path: 'signin', element: <SigninPage /> }
+        { path: 'signin', element: <SigninPage /> },
+        { path: 'login', element: <LoginPage /> }
 
       ],
       errorElement: <ErrorPage />

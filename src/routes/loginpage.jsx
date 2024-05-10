@@ -1,8 +1,6 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom';
 
-export default function SigninPage() {
-    var navigate = useNavigate();
+export default function LoginPage() {
     return (
         <div className='flex m-auto h-[calc(100svh-10rem)] w-[50svh]'>
             <div className='min-h-96 min-w-96 px-10 block common-border m-auto  py-10 bg-[#fcf3f398]'>
@@ -12,9 +10,7 @@ export default function SigninPage() {
                 <input className='input-field mt-7' type="email" name="email" id="singin-email" placeholder='Email'></input>
                 <input className='input-field mt-7' type="password" name="password" id="singin-password" placeholder='Password'></input>
                 <button className='button-fill'>Reigster</button>
-                <button className='button-outline mt-5' onClick={(e) => {
-                    navigate('login');
-                }}>Login</button>
+                <button className='button-outline mt-5'>Login</button>
             </div>
 
         </div >

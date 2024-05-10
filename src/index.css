@@ -6,7 +6,28 @@
     .button-header {
         @apply self-center h-fit px-4 py-1 border-[1.5px] rounded-[8px] font-semibold
     }
+
     .button-header:hover {
         @apply hover:bg-slate-200 text-white
+    }
+    .input-field{
+        @apply block h-10 pl-2 w-full outline-none common-border
+    }
+    .button-fill{
+       @apply w-full h-10 bg-[#ebbbbb] rounded-[10px] text-[#fff] font-semibold mt-10
+    }
+    .button-outline{
+        @apply w-full h-10 text-[#ebb] bg-white rounded-[10px] border border-[#ebb] font-semibold
+    }
+    .button-fill:hover{
+        @apply text-[#ebb] bg-white border border-[#ebb] 
+    }
+    
+}
+
+@layer utilities {
+
+    .common-border {
+        @apply border border-red-200 rounded
     }
 }
