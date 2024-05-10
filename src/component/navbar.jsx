@@ -29,8 +29,8 @@ export default function Navbar() {
                     navigate('/signup');
                 }}>Register</button>
                 <button className='button-outline px-4 text-sm mr-4' onClick={() => {
-                    navigate('/signup');
-                }}>Register</button>
+                    navigate('/login');
+                }}>login</button>
             </div>
         </div>
     )

@@ -14,6 +14,9 @@
 
 @layer components {
 
+    .app-container {
+        @apply container mx-auto px-4
+    }
     .nav-link {
         @apply inline text-lg font-semibold
     }
@@ -27,7 +30,7 @@
     }
 
     .input-field {
-        @apply block h-10 pl-2 w-full outline-none common-border
+        @apply block h-10 px-2 w-full outline-none border-none bg-[var(--grey-bg)] rounded
     }
 
     .button-fill {
