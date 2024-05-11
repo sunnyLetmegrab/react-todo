@@ -7,7 +7,6 @@ import Footer from '../component/footer'
 export default function LoginPage() {
     return (
         <div className='flex flex-col min-h-screen'>
-            <Navbar />
             <div className='app-container'>
                 <div className='block'>
                     <h1 className='text-4xl py-10'>Sign in</h1>
@@ -24,12 +23,9 @@ export default function LoginPage() {
                         <div className='col-span-3'>
                             <img src='https://img.freepik.com/free-photo/woman-holds-fashion-shopping-bag-beauty_1150-13673.jpg' alt='text'></img>
                         </div>
-
                     </div>
-
                 </div>
             </div>
-            <Footer />
         </div>
 
     )
