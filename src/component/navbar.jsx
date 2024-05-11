@@ -15,7 +15,7 @@ export default function Navbar() {
     return (
         <div className='px-[15px] flex justify-between h-14'>
             <AppTitle className='text-4xl' />
-            <ul className='block content-center list-none *:px-4'>
+            <ul className=' sm:block hidden content-center list-none *:px-4'>
                 {navItems.map((e) =>
                 (
                     <li key={e.id} className="inline">
@@ -24,7 +24,7 @@ export default function Navbar() {
                 )
                 )}
             </ul>
-            <div className='flex content-center items-center'>
+            <div className='sm:flex hidden content-center items-center'>
                 <button className='button-fill px-4 text-sm mr-4' onClick={() => {
                     navigate('/signup');
                 }}>Register</button>
@@ -32,6 +32,9 @@ export default function Navbar() {
                     navigate('/login');
                 }}>login</button>
             </div>
+            <button className='sm:hidden block'><i className="fa fa-bars" onClick={(e)=>{
+                
+            }}></i></button>
         </div>
     )
 }

@@ -16,16 +16,16 @@ var appRoute = createBrowserRouter(
   [
     {
       path: '/', element: <Root />, children: [
-        { path: 'home', element: <HomePage/>, },
+        { path: 'home', element: <HomePage />, },
         { path: 'about', element: <>about</>, },
         { path: 'contact', element: <>contact</>, },
-        { path: 'product/:id', element: <DetailPage/>, },
+        { path: 'product/:id', element: <DetailPage />, },
+        { path: 'signup', element: <SigninPage /> },
+        { path: 'login', element: <LoginPage />, }
 
       ],
       errorElement: <ErrorPage />
     },
-    { path: 'signup', element: <SigninPage /> },
-    { path: 'login', element: <LoginPage />, }
 
 
 

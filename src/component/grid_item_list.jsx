@@ -7,13 +7,13 @@ export default function GridList({ itemCount, onItemClick }) {
     var nav = useNavigate();
     return (
         <>
-            <div className='grid grid-cols-[repeat(auto-fit,minmax(17rem,1fr))] gap-3'>
+            <div className='grid xl:grid-cols-5 lg:grid-cols-3 xsm:grid-cols-2 gap-3'>
                 {list.map((item) => (<div key={item} className='col-span-1'>
                     <div className='grid-item' onClick={(e) => {
                         nav(`/product/${item}`)
                     }}>
                         <img
-                            className='h-52 rounded'
+                            className='rounded xsm:aspect-[249/208] aspect-[4/2] w-full object-cover'
                             src='https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1738&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' alt='text'></img>
                         <span className='block font-bold text-sm'>Jackson Ask 6JP Men’s Sandals  - Navy</span>
                         <span className='block text-xs text-[var(--grey-text)]'>Rp 499.000</span>

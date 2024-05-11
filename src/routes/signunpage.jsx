@@ -8,7 +8,6 @@ export default function SigninPage() {
     var navigate = useNavigate();
     return (
         <>
-            <Navbar />
             <div className='app-container'>
                 <h1 className='text-4xl py-10'>Sign up</h1>
                 <hr></hr>
@@ -39,9 +38,6 @@ export default function SigninPage() {
                     </div>
                 </div>
             </div>
-            <Footer />
-
-
         </>
 
     )
