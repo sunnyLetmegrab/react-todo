@@ -9,6 +9,7 @@
     --grey-bg: #F1F1F1;
     --error-red: #EA1C0F;
     --theme-opacity-color: #1f3d975b;
+    --item-opacity-color: #d9e0f55b;
 
 }
 
@@ -17,6 +18,7 @@
     .app-container {
         @apply container mx-auto px-4
     }
+
     .nav-link {
         @apply inline text-lg font-semibold
     }
@@ -45,11 +47,29 @@
         @apply bg-[var(--theme-opacity-color)]
     }
 
+    .grid-item {
+        @apply grid border rounded-lg justify-center p-5 *:mt-2
+    }
+    .grid-item:hover{
+        @apply bg-[var(--item-opacity-color)]
+    }
 }
 
 @layer utilities {
 
     .common-border {
         @apply border border-red-200 rounded
+    }
+
+    .grey-bg {
+        @apply outline-none border-none bg-[var(--grey-bg)]
+    }
+
+    .footer-title {
+        @apply text-[18px] font-semibold
+    }
+
+    .footer-title ul li {
+        @apply text-base font-normal my-4 underline
     }
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import Navbar from '../component/navbar';
 import InputField from '../component/input-field';
+import Footer from '../component/footer';
 
 export default function SigninPage() {
     var navigate = useNavigate();
@@ -38,7 +39,7 @@ export default function SigninPage() {
                     </div>
                 </div>
             </div>
-
+            <Footer />
 
 
         </>
